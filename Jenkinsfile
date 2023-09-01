@@ -25,6 +25,12 @@ pipeline{
             steps{ 
                 sh """
 
+                    sudo apt-get install nginx -y
+
+                    sudo systemctl enable nginx
+
+                    sudo systemctl start nginx
+
                     cd /var/www
 
                     rm -rf html
